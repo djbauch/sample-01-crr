@@ -1,0 +1,9 @@
+.DS_Store
+node_modules
+.env
+**/auth0-variables.js
+npm-debug.log
+.editorconfig
+.yarn/
+.yarnrc.yml
+.vscode/
