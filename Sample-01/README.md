@@ -1,6 +1,6 @@
 # Auth0 React SDK Sample Application
 
-This sample demonstrates the integration of [Auth0 React SDK](https://github.com/auth0/auth0-react) into a React application created using [create-react-app](https://reactjs.org/docs/create-a-new-react-app.html). The sample is a companion to the [Auth0 React SDK Quickstart](https://auth0.com/docs/quickstart/spa/react).
+This sample demonstrates the integration of [Auth0 React SDK](https://github.com/auth0/auth0-react) into a React application created using [create-react-router](https://reactrouter.com/start/framework/installation). Create-react-router has been used in place of the deprecated create-react-app approach in accordance with the advide of the React developers in the React v19 documentation at [Creating a React App](https://react.dev/learn/creating-a-react-app#recommended-toolchains). The sample is a companion to the [Auth0 React SDK Quickstart](https://auth0.com/docs/quickstart/spa/react).
 
 This sample demonstrates the following use cases:
 
@@ -51,7 +51,7 @@ To do this, first copy `src/auth_config.json.example` into a new file in the sam
 This compiles and serves the React app and starts the backend API server on port 3001.
 
 ```bash
-yarn run dev
+yarn dev
 ```
 
 ## Deployment
@@ -59,7 +59,7 @@ yarn run dev
 ### Compiles and minifies for production
 
 ```bash
-yarn run build
+yarn build
 ```
 
 ### Docker build
@@ -69,7 +69,7 @@ To build and run the Docker image, run `exec.sh`, or `exec.ps1` on Windows.
 ### Run your tests
 
 ```bash
-yarn run test
+yarn test
 ```
 
 ## Frequently Asked Questions

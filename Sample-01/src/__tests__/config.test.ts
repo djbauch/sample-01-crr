@@ -1,3 +1,5 @@
+import { describe, afterEach, it, expect, vi } from 'vitest'
+
 const mockConfig = (config) => {
   // doMock is not hoisted to the top, which means we can mock the module
   // on a per-test basis. Jest does not return mock objects

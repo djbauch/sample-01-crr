@@ -1,8 +1,8 @@
 import React from "react";
-import { Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router";
 import { Container } from "reactstrap";
 
-import Loading from "./components/Loading";
+import Loading from './components/Loading';
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Home from "./views/Home";
@@ -34,11 +34,11 @@ const App = () => {
       <div id="app" className="d-flex flex-column h-100">
         <NavBar />
         <Container className="flex-grow-1 mt-5">
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/profile" component={Profile} />
-            <Route path="/external-api" component={ExternalApi} />
-          </Switch>
+          <Routes>
+            <Route path="/" element={Home} />
+            <Route path="/profile" element={Profile} />
+            <Route path="/external-api" element={ExternalApi} />
+          </Routes>
         </Container>
         <Footer />
       </div>
