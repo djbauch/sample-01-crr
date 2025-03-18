@@ -25,4 +25,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-auth_config.json
+// Ignore the auth_config whether it's JSON, JS, or TS
+auth_config.*

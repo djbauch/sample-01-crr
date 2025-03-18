@@ -1,9 +1,5 @@
 {
-  "include": [
-    "src",
-    "vite.config.ts",
-    ".react-router/types/**/*"
-  ],
+  "include": ["src", "vite.config.ts", ".react-router/types/**/*"],
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "allowImportingTsExtensions": true,

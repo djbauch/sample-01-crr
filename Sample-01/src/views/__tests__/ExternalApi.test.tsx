@@ -1,65 +1,82 @@
-import React from "react";
-import { ExternalApiComponent } from "../ExternalApi";
-import { fireEvent, render, screen, waitFor } from "@testing-library/react";
-//import "@testing-library/jest-dom/extend-expect";
-import { useAuth0 } from "@auth0/auth0-react";
+import React from 'react'
+import { ExternalApiComponent } from '../ExternalApi'
+import { describe, it, expect, afterEach, beforeEach, vi } from 'vitest'
+import { fireEvent, render, screen, waitFor } from '@testing-library/react'
+//import '@testing-library/jest-dom'
+import { useAuth0 } from '@auth0/auth0-react'
 import { getConfig } from '../../config'
-import { describe, it, expect, beforeEach } from 'vitest'
 
-jest.mock("../../config");
-jest.mock("@auth0/auth0-react");
+import createFetchMock from 'vitest-fetch-mock'
 
-describe("The ExternalApi component", () => {
+const fetchMocker = createFetchMock(vi)
+fetchMocker.enableMocks()
+
+//vi.mock("../../config");
+//vi.mock("@auth0/auth0-react");
+
+describe('The ExternalApi component', () => {
   beforeEach(() => {
-    fetch.resetMocks();
+    fetchMocker.resetMocks()
 
+    vi.mock('../../config', () => {
+      return {
+        domain: 'test-domain.com',
+        clientId: '123',
+        apiOrigin: 'http://localhost:3001',
+        audience: 'test-audience',
+      }
+    })
     getConfig.mockReturnValue({
-      domain: "test-domain.com",
-      clientId: "123",
-      apiOrigin: "http://localhost:3001",
-      audience: "test-audience",
-    });
+      domain: 'test-domain.com',
+      clientId: '123',
+      apiOrigin: 'http://localhost:3001',
+      audience: 'test-audience',
+    })
 
-    useAuth0.mockReturnValue({
+    vi.mock('@auth0/auth0-react', () => ({
       isLoading: false,
       isAuthenticated: true,
-      getAccessTokenSilently: jest.fn(() => Promise.resolve("access-token")),
-      withAuthenticationRequired: jest.fn(),
-    });
-  });
+      getAccessTokenSilently: vi.fn(() => Promise.resolve('access-token')),
+      withAuthenticationRequired: vi.fn(),
+    }))
+    // useAuth0.mockReturnValue({
+    //   isLoading: false,
+    //   isAuthenticated: true,
+    //   getAccessTokenSilently: vi.fn(() => Promise.resolve("access-token")),
+    //   withAuthenticationRequired: vi.fn(),
+    // });
+  })
 
   afterEach(() => {
-    jest.clearAllMocks();
-  });
+    vi.clearAllMocks()
+  })
 
-  it("renders", () => {
-    render(<ExternalApiComponent />);
-  });
+  it('renders', () => {
+    render(<ExternalApiComponent />)
+  })
 
-  it("makes a call to the API when the button is clicked", async () => {
-    fetch.mockResponseOnce(JSON.stringify({ msg: "This is the API result" }));
+  it('makes a call to the API when the button is clicked', async () => {
+    fetchMocker.mockResponseOnce(JSON.stringify({ msg: 'This is the API result' }))
 
-    render(<ExternalApiComponent />);
-    fireEvent.click(screen.getByText("Ping API"));
+    render(<ExternalApiComponent />)
+    fireEvent.click(screen.getByText('Ping API'))
 
-    await waitFor(() => screen.getByTestId("api-result"));
+    await waitFor(() => screen.getByTestId('api-result'))
 
-    expect(
-      await screen.findByText(/This is the API result/)
-    ).toBeInTheDocument();
-  });
+    expect(await screen.findByText(/This is the API result/)).toBeInTheDocument()
+  })
 
-  it("shows the warning content when there is no audience", async () => {
-    getConfig.mockReturnValue(() => ({
-      domain: "test-domain.com",
-      clientId: "123",
-      apiOrigin: "http://localhost:3001",
-    }));
+  it('shows the warning content when there is no audience', async () => {
+    vi.mock('../../config', () => {
+      return {
+        domain: 'test-domain.com',
+        clientId: '123',
+        apiOrigin: 'http://localhost:3001',
+      }
+    })
 
-    render(<ExternalApiComponent />);
+    render(<ExternalApiComponent />)
 
-    expect(
-      await screen.findByText(/You can't call the API at the moment/)
-    ).toBeInTheDocument();
-  });
-});
+    expect(await screen.findByText(/You can't call the API at the moment/)).toBeInTheDocument()
+  })
+})
