@@ -1086,12 +1086,12 @@
     valibot "^0.41.0"
     vite-node "3.0.0-beta.2"
 
-"@react-router/express@7.3.0":
-  version "7.3.0"
-  resolved "https://registry.yarnpkg.com/@react-router/express/-/express-7.3.0.tgz#bf3c1a644a71952c1d866c7db926a6fe4d171c72"
-  integrity sha512-wAv020Wfwj6mW62NC8JQ6rlY1cJgeg+hRCFV2gcx5vxUfjH/tCFBRN4Rujo9WLFfRCwCEeilFqiuwBKeODDBsw==
+"@react-router/express@7.4.1":
+  version "7.4.1"
+  resolved "https://registry.yarnpkg.com/@react-router/express/-/express-7.4.1.tgz#d310cf7a93b4bee735f0928e3e5279fa31eacefe"
+  integrity sha512-L2JwyDTQqPDBeWzH/wpns1SBM4jmbuAJlY8X6SeoLIA54aiuDaJ6wzrEFh05Oo15xCciZMejFNVp2WnWXrZSRg==
   dependencies:
-    "@react-router/node" "7.3.0"
+    "@react-router/node" "7.4.1"
 
 "@react-router/node@7.3.0", "@react-router/node@^7.3.0":
   version "7.3.0"
@@ -1103,13 +1103,23 @@
     stream-slice "^0.1.2"
     undici "^6.19.2"
 
-"@react-router/serve@^7.3.0":
-  version "7.3.0"
-  resolved "https://registry.yarnpkg.com/@react-router/serve/-/serve-7.3.0.tgz#c6f0f8ac14aef056fe11a562e4ab4b0754d08d84"
-  integrity sha512-NGW8FRDghV6F04nki4dnL+sS8NHgbWkeQTtnGTIdTtPw2CaHOP7nsfJNJcetoSTw8xQjZWMDCbJfWYzSYeTF/g==
+"@react-router/node@7.4.1":
+  version "7.4.1"
+  resolved "https://registry.yarnpkg.com/@react-router/node/-/node-7.4.1.tgz#eac2325c439f398cceb3636becc1fee0b81edeca"
+  integrity sha512-CLJes6FGylwRnrCDg+nnBlBraD2iuiillx5JDhonIbMajsBJwTc7NVF3AkpNW45S8J0czGGvz19WDIe1cxbAlQ==
   dependencies:
-    "@react-router/express" "7.3.0"
-    "@react-router/node" "7.3.0"
+    "@mjackson/node-fetch-server" "^0.2.0"
+    source-map-support "^0.5.21"
+    stream-slice "^0.1.2"
+    undici "^6.19.2"
+
+"@react-router/serve@^7.4.1":
+  version "7.4.1"
+  resolved "https://registry.yarnpkg.com/@react-router/serve/-/serve-7.4.1.tgz#0f96f973484c1dd5d82e43300748aebcf1cb67bc"
+  integrity sha512-3yB+Sl0T1lxGTSeNZ+0Z4BApXwI2NR6xh0HfAYk05GhEoAuKh2MYXClgUkaI/qu6elaB0hhcq/XU4wMwJhHOIg==
+  dependencies:
+    "@react-router/express" "7.4.1"
+    "@react-router/node" "7.4.1"
     compression "^1.7.4"
     express "^4.19.2"
     get-port "5.1.1"
