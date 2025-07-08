@@ -1093,7 +1093,7 @@
   dependencies:
     "@react-router/node" "7.4.1"
 
-"@react-router/node@7.3.0", "@react-router/node@^7.3.0":
+"@react-router/node@7.3.0":
   version "7.3.0"
   resolved "https://registry.yarnpkg.com/@react-router/node/-/node-7.3.0.tgz#93106d72c1f57bf719ca2e783a0693aa6697f52a"
   integrity sha512-Vhww6DH0cVusO2yGhZuKmboGvFHuYOeIYEW0gpf0gFshbU0tR7MNAnOZS2Cud48hxVUSrEtgl0Kbs5BN+RQKJg==
@@ -1112,6 +1112,13 @@
     source-map-support "^0.5.21"
     stream-slice "^0.1.2"
     undici "^6.19.2"
+
+"@react-router/node@^7.6.3":
+  version "7.6.3"
+  resolved "https://registry.yarnpkg.com/@react-router/node/-/node-7.6.3.tgz#fddb4ade440a2c1d669afc4ac10bec0d6056898c"
+  integrity sha512-CgqYAGjrfW/Al0LbWhQ60joDci5/H3ix4IU5UwlKLtqmNPzuSUTBkCrxit3jHuMYqaBaGfyRpT7kIeb1YZ4nqA==
+  dependencies:
+    "@mjackson/node-fetch-server" "^0.2.0"
 
 "@react-router/serve@^7.4.1":
   version "7.4.1"
