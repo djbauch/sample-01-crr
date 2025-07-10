@@ -24,7 +24,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@react-router/node": "^7.3.0",
-    "@react-router/serve": "^7.4.1",
+    "@react-router/serve": "^7.6.2",
     "@testing-library/dom": "^10.4.0",
     "auth0-react-sample": "^1.0.0",
     "autoprefixer": "^10.4.21",
