@@ -4270,17 +4270,17 @@ pify@^3.0.0:
   resolved "https://registry.yarnpkg.com/pify/-/pify-3.0.0.tgz#e5a4acd2c101fdf3d9a4d07f0dbc4db49dd28176"
   integrity sha512-C3FsVNH1udSEX48gGX1xfvwTWfsYWj5U+8/uK15BGzIGrKoUpghX8hWZwa/OFnakBiiVNmBvemTJR5mcy7iPcg==
 
-playwright-core@1.51.0:
-  version "1.51.0"
-  resolved "https://registry.yarnpkg.com/playwright-core/-/playwright-core-1.51.0.tgz#bb23ea6bb6298242d088ae5e966ffcf8dc9827e8"
-  integrity sha512-x47yPE3Zwhlil7wlNU/iktF7t2r/URR3VLbH6EknJd/04Qc/PSJ0EY3CMXipmglLG+zyRxW6HNo2EGbKLHPWMg==
+playwright-core@1.54.0:
+  version "1.54.0"
+  resolved "https://registry.yarnpkg.com/playwright-core/-/playwright-core-1.54.0.tgz#a019b51d537250d809bbd5f612f5bc712bcbff7b"
+  integrity sha512-uiWpWaJh3R3etpJ0QrpligEMl62Dk1iSAB6NUXylvmQz+e3eipXHDHvOvydDAssb5Oqo0E818qdn0L9GcJSTyA==
 
-playwright@^1.51.0:
-  version "1.51.0"
-  resolved "https://registry.yarnpkg.com/playwright/-/playwright-1.51.0.tgz#9ba154497ba62bc6dc199c58ee19295eb35a4707"
-  integrity sha512-442pTfGM0xxfCYxuBa/Pu6B2OqxqqaYq39JS8QDMGThUvIOCd6s0ANDog3uwA0cHavVlnTQzGCN7Id2YekDSXA==
+playwright@^1.54.0:
+  version "1.54.0"
+  resolved "https://registry.yarnpkg.com/playwright/-/playwright-1.54.0.tgz#cd1538103c872d02ab22bf3bcb8abfc5705b336b"
+  integrity sha512-y9yzHmXRwEUOpghM7XGcA38GjWuTOUMaTIcm/5rHcYVjh5MSp9qQMRRMc/+p1cx+csoPnX4wkxAF61v5VKirxg==
   dependencies:
-    playwright-core "1.51.0"
+    playwright-core "1.54.0"
   optionalDependencies:
     fsevents "2.3.2"
 
