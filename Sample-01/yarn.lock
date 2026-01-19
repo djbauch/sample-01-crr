@@ -1086,14 +1086,21 @@
     valibot "^0.41.0"
     vite-node "3.0.0-beta.2"
 
-"@react-router/express@7.4.1":
-  version "7.4.1"
-  resolved "https://registry.yarnpkg.com/@react-router/express/-/express-7.4.1.tgz#d310cf7a93b4bee735f0928e3e5279fa31eacefe"
-  integrity sha512-L2JwyDTQqPDBeWzH/wpns1SBM4jmbuAJlY8X6SeoLIA54aiuDaJ6wzrEFh05Oo15xCciZMejFNVp2WnWXrZSRg==
+"@react-router/express@7.12.0":
+  version "7.12.0"
+  resolved "https://registry.yarnpkg.com/@react-router/express/-/express-7.12.0.tgz#0896e7c7aac9fe824ba23cb84176aa79a23330d7"
+  integrity sha512-uAK+zF93M6XauGeXLh/UBh+3HrwiA/9lUS+eChjQ0a5FzjLpsc6ciUqF5oHh3lwWzLU7u7tj4qoeucUn6SInTw==
   dependencies:
-    "@react-router/node" "7.4.1"
+    "@react-router/node" "7.12.0"
 
-"@react-router/node@7.3.0", "@react-router/node@^7.3.0":
+"@react-router/node@7.12.0", "@react-router/node@^7.9.4":
+  version "7.12.0"
+  resolved "https://registry.yarnpkg.com/@react-router/node/-/node-7.12.0.tgz#f9f46c8f36b98870fac0e81c73d75c4a88620667"
+  integrity sha512-o/t10Cse4LK8kFefqJ8JjC6Ng6YuKD2I87S2AiJs17YAYtXU5W731ZqB73AWyCDd2G14R0dSuqXiASRNK/xLjg==
+  dependencies:
+    "@mjackson/node-fetch-server" "^0.2.0"
+
+"@react-router/node@7.3.0":
   version "7.3.0"
   resolved "https://registry.yarnpkg.com/@react-router/node/-/node-7.3.0.tgz#93106d72c1f57bf719ca2e783a0693aa6697f52a"
   integrity sha512-Vhww6DH0cVusO2yGhZuKmboGvFHuYOeIYEW0gpf0gFshbU0tR7MNAnOZS2Cud48hxVUSrEtgl0Kbs5BN+RQKJg==
@@ -1103,27 +1110,18 @@
     stream-slice "^0.1.2"
     undici "^6.19.2"
 
-"@react-router/node@7.4.1":
-  version "7.4.1"
-  resolved "https://registry.yarnpkg.com/@react-router/node/-/node-7.4.1.tgz#eac2325c439f398cceb3636becc1fee0b81edeca"
-  integrity sha512-CLJes6FGylwRnrCDg+nnBlBraD2iuiillx5JDhonIbMajsBJwTc7NVF3AkpNW45S8J0czGGvz19WDIe1cxbAlQ==
+"@react-router/serve@^7.9.4":
+  version "7.12.0"
+  resolved "https://registry.yarnpkg.com/@react-router/serve/-/serve-7.12.0.tgz#e6d4f23eb0496796b02ef66c9cdac939299d29bb"
+  integrity sha512-j1ltgU7s3wAwOosZ5oxgHSsmVyK706gY/yIs8qVmC239wQ3zr3eqaXk3TVVLMeRy+eDgPNmgc6oNJv2o328VgA==
   dependencies:
     "@mjackson/node-fetch-server" "^0.2.0"
-    source-map-support "^0.5.21"
-    stream-slice "^0.1.2"
-    undici "^6.19.2"
-
-"@react-router/serve@^7.4.1":
-  version "7.4.1"
-  resolved "https://registry.yarnpkg.com/@react-router/serve/-/serve-7.4.1.tgz#0f96f973484c1dd5d82e43300748aebcf1cb67bc"
-  integrity sha512-3yB+Sl0T1lxGTSeNZ+0Z4BApXwI2NR6xh0HfAYk05GhEoAuKh2MYXClgUkaI/qu6elaB0hhcq/XU4wMwJhHOIg==
-  dependencies:
-    "@react-router/express" "7.4.1"
-    "@react-router/node" "7.4.1"
-    compression "^1.7.4"
+    "@react-router/express" "7.12.0"
+    "@react-router/node" "7.12.0"
+    compression "^1.8.1"
     express "^4.19.2"
     get-port "5.1.1"
-    morgan "^1.10.0"
+    morgan "^1.10.1"
     source-map-support "^0.5.21"
 
 "@rollup/rollup-android-arm-eabi@4.35.0":
@@ -2059,16 +2057,16 @@ compressible@~2.0.18:
   dependencies:
     mime-db ">= 1.43.0 < 2"
 
-compression@^1.7.4:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/compression/-/compression-1.8.0.tgz#09420efc96e11a0f44f3a558de59e321364180f7"
-  integrity sha512-k6WLKfunuqCYD3t6AsuPGvQWaKwuLLh2/xHNcX4qE+vIfDNXpSqnrhwA7O53R7WVQUnt8dVAIW+YHr7xTgOgGA==
+compression@^1.8.1:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/compression/-/compression-1.8.1.tgz#4a45d909ac16509195a9a28bd91094889c180d79"
+  integrity sha512-9mAqGPHLakhCLeNyxPkK4xVo746zQ/czLH1Ky+vkitMnWfWZps8r0qXuwhwizagCRttsL4lfG4pIOvaWLpAP0w==
   dependencies:
     bytes "3.1.2"
     compressible "~2.0.18"
     debug "2.6.9"
     negotiator "~0.6.4"
-    on-headers "~1.0.2"
+    on-headers "~1.1.0"
     safe-buffer "5.2.1"
     vary "~1.1.2"
 
@@ -3918,6 +3916,17 @@ morgan@^1.10.0:
     on-finished "~2.3.0"
     on-headers "~1.0.2"
 
+morgan@^1.10.1:
+  version "1.10.1"
+  resolved "https://registry.yarnpkg.com/morgan/-/morgan-1.10.1.tgz#4e02e6a4465a48e26af540191593955d17f61570"
+  integrity sha512-223dMRJtI/l25dJKWpgij2cMtywuG/WiUKXdvwfbhGKBhy1puASqXwFzmWZ7+K73vUPoR7SS2Qz2cI/g9MKw0A==
+  dependencies:
+    basic-auth "~2.0.1"
+    debug "2.6.9"
+    depd "~2.0.0"
+    on-finished "~2.3.0"
+    on-headers "~1.1.0"
+
 motion-dom@^12.5.0:
   version "12.5.0"
   resolved "https://registry.yarnpkg.com/motion-dom/-/motion-dom-12.5.0.tgz#38beabafa11c068f09c2b096674b2d46025a0a24"
@@ -4138,6 +4147,11 @@ on-headers@~1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/on-headers/-/on-headers-1.0.2.tgz#772b0ae6aaa525c399e489adfad90c403eb3c28f"
   integrity sha512-pZAE+FJLoyITytdqK0U5s+FIpjN0JP3OzFi/u8Rx+EV5/W+JTWGXG8xFzevE7AjBfDqHv/8vL8qQsIhHnqRkrA==
+
+on-headers@~1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/on-headers/-/on-headers-1.1.0.tgz#59da4f91c45f5f989c6e4bcedc5a3b0aed70ff65"
+  integrity sha512-737ZY3yNnXy37FHkQxPzt4UZ2UWPWiCZWLvFZ4fu5cueciegX0zGPnrlY6bwRg4FdQOe9YU8MkmJwGhoMybl8A==
 
 own-keys@^1.0.1:
   version "1.0.1"
@@ -4623,14 +4637,13 @@ react-router@^2.4.0:
     loose-envify "^1.2.0"
     warning "^3.0.0"
 
-react-router@^7.5.2:
-  version "7.5.3"
-  resolved "https://registry.yarnpkg.com/react-router/-/react-router-7.5.3.tgz#9e5420832af8c3690740c1797d4fa54613fea06d"
-  integrity sha512-3iUDM4/fZCQ89SXlDa+Ph3MevBrozBAI655OAfWQlTm9nBR0IKlrmNwFow5lPHttbwvITZfkeeeZFP6zt3F7pw==
+react-router@^7.12.0:
+  version "7.12.0"
+  resolved "https://registry.yarnpkg.com/react-router/-/react-router-7.12.0.tgz#459a86862abbedd02e76e686751fe71f9fd73a4f"
+  integrity sha512-kTPDYPFzDVGIIGNLS5VJykK0HfHLY5MF3b+xj0/tTyNYL1gF1qs7u67Z9jEhQk2sQ98SUaHxlG31g1JtF7IfVw==
   dependencies:
     cookie "^1.0.1"
     set-cookie-parser "^2.6.0"
-    turbo-stream "2.4.0"
 
 react-style-singleton@^2.2.2, react-style-singleton@^2.2.3:
   version "2.2.3"
@@ -5391,11 +5404,6 @@ tslib@^2.0.0, tslib@^2.1.0, tslib@^2.4.0:
   version "2.8.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.8.1.tgz#612efe4ed235d567e8aba5f2a5fab70280ade83f"
   integrity sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==
-
-turbo-stream@2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/turbo-stream/-/turbo-stream-2.4.0.tgz#1e4fca6725e90fa14ac4adb782f2d3759a5695f0"
-  integrity sha512-FHncC10WpBd2eOmGwpmQsWLDoK4cqsA/UT/GqNoaKOQnT8uzhtCbg3EoUDMvqpOSAI0S26mr0rkjzbOO6S3v1g==
 
 type-is@~1.6.18:
   version "1.6.18"
